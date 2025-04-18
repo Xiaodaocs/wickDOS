@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <link
+      rel="icon"
+      href="https://cdn.glitch.global/fc6cd04c-cfa1-4bea-ae55-e2d7856ba848/winkode.jpeg?v=1742696259804"
+      type="https://cdn.glitch.global/fc6cd04c-cfa1-4bea-ae55-e2d7856ba848/winkode.jpeg?v=1742696259804"
+    />
+    <!-- 替换为你的图标路径 -->
+    <link
+      rel="shortcut icon"
+      href="https://cdn.glitch.global/fc6cd04c-cfa1-4bea-ae55-e2d7856ba848/winkode.jpeg?v=1742696259804"
+      type="https://cdn.glitch.global/fc6cd04c-cfa1-4bea-ae55-e2d7856ba848/winkode.jpeg?v=1742696259804"
+    />
+    <style>
+        body {
+            min-height: 100vh;
+            margin: 0;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #0a0f1a 5%, #1a2a4d 95%);
+            font-family: 'Segoe UI', system-ui;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .glass-button {
+            position: relative;
+            padding: 18px 30px;
+            border: none;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            overflow: hidden;
+            cursor: pointer;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .glass-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.1),
+                transparent
+            );
+            transition: 0.5s;
+        }
+
+        .glass-button:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(58, 163, 255, 0.2);
+        }
+
+        .glass-button:hover::before {
+            left: 100%;
+        }
+
+        .glass-button span {
+            position: relative;
+            z-index: 1;
+            display: block;
+            padding: 8px 0;
+            line-height: 1.4;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="button-container">
+        <a href="https://winkode-cn.glitch.me/winkode.html" class="glass-button">
+            <span>✨ 进入 Winkode 奇妙世界</span>
+        </a>
+        <a href="https://xiaodaocs.github.io/xoids.github.io/login" class="glass-button">
+            <span>🚀 探索开发者宇宙</span>
+        </a>
+    </div>
+  </body>
+  <footer data-v-ad6c7ee6="" data-v-0a651224="" class="footer">
+  <div data-v-ad6c7ee6="">
+    <p style="text-align: center">&nbsp;</p>
+    <p style="text-align: center">
+      <span style="color: #7e8c8d"
+        >本网站开发-ChildSoft-臖CX.PM.XD&nbsp; &nbsp;
+        本网站全部权归少软科技有限公司，xoid所有，如有疑问，请联系我们<a
+          style="color: #7e8c8d"
+          href="https://xiaodaocs.github.io/xoids.github.io/login"
+          >关于网站作者
+        </a><p style="color: #7e8c8d">
+          Copyright © 2018 - 2025 Childsoft wink . All Rights Reserved. 少软
+          版权所有 &copy;
+        </p>
+      </span>
+    </p>
+  </div>
+</footer>
+</html>

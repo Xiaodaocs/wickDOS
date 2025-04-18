@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>winkode-关于我们</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- 引入 Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">  
+  <link
+      rel="icon"
+      href="https://cdn.glitch.global/fc6cd04c-cfa1-4bea-ae55-e2d7856ba848/winkode.jpeg?v=1742696259804"
+      type="https://cdn.glitch.global/fc6cd04c-cfa1-4bea-ae55-e2d7856ba848/winkode.jpeg?v=1742696259804"
+    />
+    <!-- 替换为你的图标路径 -->
+    <link
+      rel="shortcut icon"
+      href="https://cdn.glitch.global/fc6cd04c-cfa1-4bea-ae55-e2d7856ba848/winkode.jpeg?v=1742696259804"
+      type="https://cdn.glitch.global/fc6cd04c-cfa1-4bea-ae55-e2d7856ba848/winkode.jpeg?v=1742696259804"
+    />
+  <style>
+        /* 自定义样式 */
+        .hero-section {
+            background-image: url('robot.png'); /* 替换为你的机器人图片URL */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色覆盖层 */
+            backdrop-filter: blur(10px); /* 磨玻璃效果 */
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .flip-card {
+            background-color: transparent;
+            width: 300px;
+            height: 200px;
+            perspective: 1000px;
+            margin: 20px auto;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .flip-card-back {
+            transform: rotateY(180deg);
+        }
+
+        /* 新增的内容区域样式 */
+        .content-box {
+            border: 2px solid #007bff; /* 边框颜色 */
+            border-radius: 10px; /* 圆角 */
+            padding: 20px; /* 内边距 */
+            margin-top: 30px; /* 上边距 */
+            background-color: #f8f9fa; /* 背景颜色 */
+        }
+      :root {
+        --bs-primary: #3aa3ff;
+        --bs-primary-rgb: 58, 163, 255;
+      }
+
+      body {
+        background: linear-gradient(45deg, #0a0f1a 0%, #1a2a4d 100%);
+        color: rgb(250, 250, 250);
+        padding-top: 50px; /* 补偿固定导航栏高度 */
+        position: relative;
+        overflow-x: hidden;
+        overflow-y: auto;
+      }
+
+      body::before {
+        content: "";
+        position: absolute;
+        width: 300%;
+        height: 300%;
+        background-image: radial-gradient(#ffffff 5%, transparent 15%);
+        opacity: 0.1;
+        animation: stars 60s linear infinite;
+        transform: translate(-25%, -25%);
+      }
+
+      @keyframes stars {
+        0% {
+          transform: translate(-25%, -25%) rotate(0deg);
+        }
+        100% {
+          transform: translate(-25%, -25%) rotate(360deg);
+        }
+      }
+
+      .navbar {
+        background: rgba(16, 24, 39, 0.85) !important;
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        z-index: 1000; /* 确保导航栏在最顶层 */
+      }
+
+      .download-card {
+        background: rgba(26, 42, 77, 0.6) !important;
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(58, 163, 255, 0.2);
+      }
+
+      .card-title,
+      .text-muted,
+      .list-group-item {
+        color: rgba(255, 255, 255, 0.9) !important;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+
+      .list-group-item {
+        background: rgba(255, 255, 255, 0.05) !important;
+        border-color: rgba(255, 255, 255, 0.1) !important;
+      }
+
+      .btn-primary {
+        background: var(--bs-primary);
+        border: none;
+        box-shadow: 0 4px 15px rgba(58, 163, 255, 0.3);
+        transition: all 0.3s ease;
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(58, 163, 255, 0.5);
+      }
+
+      .version-badge {
+        background: rgba(58, 163, 255, 0.9) !important;
+        z-index: 1;
+      }
+
+      .btn-custom {
+        background-color: #007bff;
+        /* 自定义背景色 */
+        color: white;
+        /* 字体颜色 */
+        border: none;
+        /* 去掉边框 */
+        border-radius: 5px;
+        /* 圆角 */
+        padding: 10px 20px;
+        /* 内边距 */
+        transition: background-color 0.3s;
+        /* 背景色过渡效果 */
+        margin-bottom: 15px;
+        /* 增加按钮之间的间距 */
+      }
+
+      .btn-custom:hover {
+        background-color: #0056b3;
+        /* 悬停时的背景色 */
+      }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark fixed-top"
+      style="
+        background: linear-gradient(45deg, #0a0f1a, #1a2a4d);
+        backdrop-filter: blur(8px);
+      "
+    >
+      <div class="container">
+        <a class="navbar-brand" href="winkode.html">
+          <span style="color: #3aa3ff; font-weight: 700; font-size: 1.5rem"
+            >WINKODE</span
+          >
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="winkode.html">首页</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">关于我们</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">服务</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="download.html">
+                下载
+                <span class="badge badge-pill badge-primary ml-2">new!</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">联系我们</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1>关于我们</h1>
+        <p>这是关于我们的页面内容。</p>
+
+        <!-- 新增的内容区域 -->
+        <div class="content-box">
+            <h2>我公司的内容</h2>
+            <p>我们是一家致力于提供优质服务的公司，旨在帮助用户更好地使用技术。我们的团队由经验丰富的专业人士组成，致力于创新和卓越的服务。</p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+  <footer data-v-ad6c7ee6="" data-v-0a651224="" class="footer">
+  <div data-v-ad6c7ee6="">
+    <p style="text-align: center">&nbsp;</p>
+    <p style="text-align: center">
+      <span style="color: #7e8c8d"
+        >本网站开发-ChildSoft-臖CX.PM.XD&nbsp; &nbsp;
+        本网站全部权归少软科技有限公司，xoid所有，如有疑问，请联系我们<a
+          style="color: #7e8c8d"
+          href="https://xiaodaocs.github.io/xoids.github.io/login"
+          >关于网站作者
+        </a><p style="color: #7e8c8d">
+          Copyright © 2018 - 2025 Childsoft wink . All Rights Reserved. 少软
+          版权所有 &copy;
+        </p>
+      </span>
+    </p>
+  </div>
+</footer>
+</html>
